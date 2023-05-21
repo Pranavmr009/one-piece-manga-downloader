@@ -4,6 +4,22 @@ from bs4 import BeautifulSoup
 import os
 import threading
 
+print("""
+
+ $$$$$$\                            $$$$$$$\  $$\                               
+$$  __$$\                           $$  __$$\ \__|                              
+$$ /  $$ |$$$$$$$\   $$$$$$\        $$ |  $$ |$$\  $$$$$$\   $$$$$$$\  $$$$$$\  
+$$ |  $$ |$$  __$$\ $$  __$$\       $$$$$$$  |$$ |$$  __$$\ $$  _____|$$  __$$\ 
+$$ |  $$ |$$ |  $$ |$$$$$$$$ |      $$  ____/ $$ |$$$$$$$$ |$$ /      $$$$$$$$ |
+$$ |  $$ |$$ |  $$ |$$   ____|      $$ |      $$ |$$   ____|$$ |      $$   ____|
+ $$$$$$  |$$ |  $$ |\$$$$$$$\       $$ |      $$ |\$$$$$$$\ \$$$$$$$\ \$$$$$$$\ 
+ \______/ \__|  \__| \_______|      \__|      \__| \_______| \_______| \_______|
+                                                                                                                                                                                                                                          
+
+""")
+
+path = input("Enter the location where the manga should be downloaded: ")
+
 url = "https://ww9.readonepiece.com/chapter/one-piece-digital-colored-comics-chapter-"
 url1 = "https://ww9.readonepiece.com/manga/one-piece-digital-colored-comics/"
 
@@ -32,7 +48,7 @@ def main():
             chapter = str(chapter)
 
         chapter_url = f"{url}{chapter}"
-        target = f"/media/pranav/HDD-1/one-piece-manga/One-piece-{chapter}.pdf"
+        target = f"{path}/One-piece-{chapter}.pdf"
 
         if os.path.exists(target) and os.path.exists(target):
             pass
