@@ -9,7 +9,6 @@ url1 = "https://ww9.readonepiece.com/manga/one-piece-digital-colored-comics/"
 
 
 def main():
-
     r = requests.get(url1).content
     soup = BeautifulSoup(r, 'html.parser')
 
@@ -41,6 +40,7 @@ def main():
         else:
 
             converter.convert(f"{chapter_url}", target=target)
+
 
 for i in range(20):
     t = threading.Thread(target=main)
